@@ -6,27 +6,27 @@ import java.util.StringTokenizer;
 
 /** This is the bare bones thing that works logically but basically 
  * produces nothing useful as it will count a the etc as terms */
-public class SimpleTermExtractor implements TermExtractor{
+public class SimpleTermExtractor implements TermExtractor {
 
   @Override
-  public Map<String, Long> extractScores(Shop shop) {
-    Map<String,Long> termScore = new HashMap<String,Long>();
+  public TermResults extractScores(Shop shop) {
+    TermResults termResults = new TermResults(); 
     for (Item item: shop.getItems()){
       StringTokenizer st = new StringTokenizer(item.getTitle(), " .!,?");
       while (st.hasMoreTokens()){
         String token = st.nextToken();
-        scoreTerm(token, termScore);
+        scoreTerm(token, termResults);
       }
       st = new StringTokenizer(item.getDescription(), " .!,?");
       while (st.hasMoreTokens()){
         String token = st.nextToken();
-        scoreTerm(token, termScore);
+        scoreTerm(token, termResults);
       }
     }
-    return termScore;
+    return termResults;
   }
 
-  private static void scoreTerm(String term, Map<String,Long> termScore){
+  private static void scoreTerm(String term, TermResults termResults){
     term = term.toLowerCase();
     if (term.endsWith("'s")){
       term = term.replace("'s", "");
@@ -34,10 +34,6 @@ public class SimpleTermExtractor implements TermExtractor{
     if (term.endsWith("’s")){
       term = term.replace("’s", "");
     }
-    if (termScore.containsKey(term)){
-      termScore.put(term, termScore.get(term) + 1L);
-    } else {
-      termScore.put(term, 1L);
-    }
+    termResults.addTerm(term);
   }
 }
