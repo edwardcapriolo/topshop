@@ -3,7 +3,7 @@ package io.teknek.topship;
 import java.util.StringTokenizer;
 
 /** This is the bare bones thing that works logically but basically 
- * produces nothing useful as it will count a the etc as terms */
+ * produces nothing useful as it will count all words including what should be stop words */
 public class SimpleTermExtractor implements TermExtractor {
 
   @Override
