@@ -19,9 +19,9 @@ public class TestSimpleExtractor {
   public void test(){
     SimpleTermExtractor te = new SimpleTermExtractor();
     TermResults tr = te.extractScores(edsBookAndPetShop());
-    Assert.assertEquals(Arrays.asList("hive", "hadoop"), tr.scoreTerms().get(3L));
+    Assert.assertEquals(Arrays.asList("hive", "hadoop"), tr.getScoreTerms().get(3L));
     Assert.assertEquals(new Long(3L), tr.getTermScore().get("hive"));
-    TreeMap<Long, List<String>> termScores = tr.scoreTerms();
+    TreeMap<Long, List<String>> termScores = tr.getScoreTerms();
     {
       Entry<Long, List<String>> i = termScores.pollLastEntry();
       Assert.assertEquals(Long.valueOf(4), i.getKey());

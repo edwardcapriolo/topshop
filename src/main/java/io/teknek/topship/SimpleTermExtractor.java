@@ -1,7 +1,5 @@
 package io.teknek.topship;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.StringTokenizer;
 
 /** This is the bare bones thing that works logically but basically 

@@ -17,7 +17,12 @@ public class TermResults {
     }
   }
   
-  public TreeMap<Long,List<String>> scoreTerms(){
+  /**
+   * 
+   * @return a sorted map of counts to terms with that count.
+   * (This TreeMap makes top-n easy)
+   */
+  public TreeMap<Long,List<String>> getScoreTerms(){
     TreeMap<Long,List<String>> toReturn = new TreeMap<Long,List<String>>();
     for(Map.Entry<String, Long> entry: termScore.entrySet()){
       if(toReturn.containsKey(entry.getValue())){
