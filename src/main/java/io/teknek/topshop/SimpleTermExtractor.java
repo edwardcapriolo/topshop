@@ -9,7 +9,9 @@ import java.util.Set;
 import java.util.StringTokenizer;
 
 /** This is the bare bones thing that works logically but basically 
- * produces nothing useful as it will count all words including what should be stop words */
+ * uses a stop words list to avoid super common words. 
+ * could use https://github.com/edwardcapriolo/lang-tools 
+ * to get only interesting parts of speech */
 public class SimpleTermExtractor implements TermExtractor {
 
   private Set<String> stopWords;
