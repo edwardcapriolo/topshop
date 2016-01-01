@@ -6,7 +6,7 @@ import java.util.Set;
 public class Shop {
   private String name;
   private String url;
-  private Set<Item> items;
+  private Set<Listing> items;
   
   public Shop(){
     items = new HashSet<>();
@@ -28,11 +28,11 @@ public class Shop {
     this.url = url;
   }
 
-  public Set<Item> getItems() {
+  public Set<Listing> getItems() {
     return items;
   }
 
-  public void setItems(Set<Item> items) {
+  public void setItems(Set<Listing> items) {
     this.items = items;
   }
   

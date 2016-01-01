@@ -39,6 +39,12 @@
 		</dependency>
 
 		<dependency>
+    			<groupId>net.sf.corn</groupId>
+    			<artifactId>corn-httpclient</artifactId>
+    			<version>1.0.12</version>
+		</dependency>
+
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
