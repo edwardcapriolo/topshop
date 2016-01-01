@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
-import io.teknek.topship.Listing;
-import io.teknek.topship.Shop;
-import io.teknek.topship.SimpleTermExtractor;
-import io.teknek.topship.TermResults;
+import io.teknek.topshop.Listing;
+import io.teknek.topshop.Shop;
+import io.teknek.topshop.SimpleTermExtractor;
+import io.teknek.topshop.TermResults;
 
 import org.junit.Assert;
 import org.junit.Test;

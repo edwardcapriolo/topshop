@@ -1,4 +1,4 @@
-package io.teknek.topship;
+package io.teknek.topshop;
 
 import java.io.IOException;
 import java.net.URI;

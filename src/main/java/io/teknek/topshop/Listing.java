@@ -1,4 +1,4 @@
-package io.teknek.topship;
+package io.teknek.topshop;
 
 public class Listing {
   private long listing_id;

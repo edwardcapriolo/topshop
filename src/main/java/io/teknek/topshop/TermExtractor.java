@@ -1,4 +1,4 @@
-package io.teknek.topship;
+package io.teknek.topshop;
 
 /** Extracting terms properly requires ma-sheen-learning. You have things like multiple word terms and proper nouns. 
  * this interface provides the ability to build different backends so that you can do more ma-sheen-learning without

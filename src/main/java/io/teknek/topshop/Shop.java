@@ -1,4 +1,4 @@
-package io.teknek.topship;
+package io.teknek.topshop;
 
 import java.util.HashSet;
 import java.util.Set;

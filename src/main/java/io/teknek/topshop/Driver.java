@@ -1,4 +1,4 @@
-package io.teknek.topship;
+package io.teknek.topshop;
 
 import java.util.List;
 import java.util.Map.Entry;
